@@ -1,0 +1,27 @@
+{
+  "name": "ses-web",
+  "version": "1.0.0",
+  "description": "Webserver for SES Project",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "npm install --prefix server && npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^15.0.1",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8",
+    "node-telegram-bot-api": "^0.56.0"
+  }
+}
